@@ -193,8 +193,13 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StickerCell
-        cell.configure
-        
+//        if self.searchBar.text == ""{
+//            cell.configure(with: stickerList)
+//        } else{
+//            cell.configure(with: filteredStickerList)
+//
+//        }
+        cell.configure(with: stickerList[indexPath.item])
         return cell
 
     }
