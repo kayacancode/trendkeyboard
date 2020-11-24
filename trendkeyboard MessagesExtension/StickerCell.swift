@@ -7,10 +7,11 @@
 
 import UIKit
 import Messages
-import AVFoundation
 
 class StickerCell: UICollectionViewCell {
     
+    
+    private var stickerName: String?
     
     
     private let mySticker: MSStickerView = {
@@ -22,8 +23,7 @@ class StickerCell: UICollectionViewCell {
         return stickerView
     }()
     
-    private var mySound : AVAudioPlayer?
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(mySticker)
@@ -39,16 +39,12 @@ class StickerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with stickerName : URL ) {
-        if let filePath = Bundle.main.path(forResource: stickerName.absoluteString, ofType: "mp3") {
-            let fileUrl = URL(fileURLWithPath: filePath)
-            if let trendSounds = try?  AVAudioPlayer.init(contentsOf: fileUrl){
-                mySound = trendSounds
+    func configure(with stickerURL : URL ) {
 
-            }
-
-        }
-        mySticker.sticker =  try? MSSticker( contentsOfFileURL: stickerName, localizedDescription: stickerName.absoluteString)
+        mySticker.sticker =  try? MSSticker( contentsOfFileURL: stickerURL, localizedDescription: stickerURL.absoluteString)
+        
+        stickerName = stickerURL.absoluteString
+        
         
     }
     

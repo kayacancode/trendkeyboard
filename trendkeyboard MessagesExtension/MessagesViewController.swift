@@ -17,7 +17,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
     
     
     var stickerList = [URL]()
-    var filteredStickerList = [String]()
+    var filteredStickerList = [URL]()
     
     func createCells(){
         let fileManager = FileManager.default
@@ -75,9 +75,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
     // expansive view
     lazy var searchBar : UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.showsScopeBar = true
-        searchBar.scopeButtonTitles = ["phrases", "memes"]
-        searchBar.selectedScopeButtonIndex = 0
+
         searchBar.placeholder = "Search to find a sticker"
         searchBar.barTintColor = UIColor(red: 0.77, green: 0.87, blue: 0.96, alpha: 1.00)
         searchBar.searchBarStyle = UISearchBar.Style.prominent
@@ -108,26 +106,17 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredStickerList = []
-        
-        
-    
-
-        
+       
         if self.searchBar.text == "" {
-//            filteredStickerList = URL
             self.searchBar.showsCancelButton = false
-//            filteredStickerList = stickerList
-//            var filteredStickerList = [URL]()
-//            filteredStickerList = stickerList
-            
-   
+            filteredStickerList = stickerList
            
         } else {
             self.searchBar.showsCancelButton = true
             for sticker in stickerList {
                 let string = sticker.absoluteString
                 if string.lowercased().contains(searchText.lowercased()){
-                    filteredStickerList.append(string)
+                    filteredStickerList.append(sticker)
                 }
 
             }
@@ -136,10 +125,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         self.stickerCollection.reloadData()
        
     }
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        print("New scope index is now \(selectedScope)")
-    }
-    
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         
