@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9744E36B255C8C44009BAF3E /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744E36A255C8C44009BAF3E /* StickerCell.swift */; };
+		9744E36F255C8D06009BAF3E /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744E36E255C8D06009BAF3E /* CustomData.swift */; };
+		9744E379255C9378009BAF3E /* Stickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9744E378255C9378009BAF3E /* Stickers.bundle */; };
+		97A529E5255F86A600D8A886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EE6CF8255A0D05000CB298 /* Assets.xcassets */; };
+		97BE293C2561B0830003BB30 /* Sounds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97BE293B2561B0820003BB30 /* Sounds.bundle */; };
+		97BE29402561BE850003BB30 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE293F2561BE850003BB30 /* Conversation.swift */; };
+		97EE6CE5255A0D04000CB298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EE6CE4255A0D04000CB298 /* Assets.xcassets */; };
+		97EE6CEC255A0D05000CB298 /* trendkeyboard MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97EE6CEB255A0D05000CB298 /* trendkeyboard MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		97EE6CF1255A0D05000CB298 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EE6CF0255A0D05000CB298 /* Messages.framework */; };
+		97EE6CF4255A0D05000CB298 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE6CF3255A0D05000CB298 /* MessagesViewController.swift */; };
+		97EE6CF7255A0D05000CB298 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97EE6CF5255A0D05000CB298 /* MainInterface.storyboard */; };
+		97EE6CF9255A0D05000CB298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EE6CF8255A0D05000CB298 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97EE6CED255A0D05000CB298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97EE6CDB255A0D01000CB298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97EE6CEA255A0D05000CB298;
+			remoteInfo = "trendkeyboard MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97EE6D00255A0D05000CB298 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97EE6CEC255A0D05000CB298 /* trendkeyboard MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9744E36A255C8C44009BAF3E /* StickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
+		9744E36E255C8D06009BAF3E /* CustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomData.swift; sourceTree = "<group>"; };
+		9744E378255C9378009BAF3E /* Stickers.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Stickers.bundle; sourceTree = "<group>"; };
+		97BE293B2561B0820003BB30 /* Sounds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Sounds.bundle; sourceTree = "<group>"; };
+		97BE293F2561BE850003BB30 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		97EE6CE1255A0D02000CB298 /* trendkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trendkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97EE6CE4255A0D04000CB298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97EE6CE6255A0D04000CB298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97EE6CEB255A0D05000CB298 /* trendkeyboard MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "trendkeyboard MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97EE6CF0255A0D05000CB298 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		97EE6CF3255A0D05000CB298 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		97EE6CF6255A0D05000CB298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		97EE6CF8255A0D05000CB298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97EE6CFA255A0D05000CB298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97EE6CE8255A0D05000CB298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EE6CF1255A0D05000CB298 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97EE6CDA255A0D01000CB298 = {
+			isa = PBXGroup;
+			children = (
+				97BE293B2561B0820003BB30 /* Sounds.bundle */,
+				9744E378255C9378009BAF3E /* Stickers.bundle */,
+				97EE6CE3255A0D02000CB298 /* trendkeyboard */,
+				97EE6CF2255A0D05000CB298 /* trendkeyboard MessagesExtension */,
+				97EE6CEF255A0D05000CB298 /* Frameworks */,
+				97EE6CE2255A0D02000CB298 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97EE6CE2255A0D02000CB298 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97EE6CE1255A0D02000CB298 /* trendkeyboard.app */,
+				97EE6CEB255A0D05000CB298 /* trendkeyboard MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97EE6CE3255A0D02000CB298 /* trendkeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				97EE6CE4255A0D04000CB298 /* Assets.xcassets */,
+				97EE6CE6255A0D04000CB298 /* Info.plist */,
+			);
+			path = trendkeyboard;
+			sourceTree = "<group>";
+		};
+		97EE6CEF255A0D05000CB298 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97EE6CF0255A0D05000CB298 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97EE6CF2255A0D05000CB298 /* trendkeyboard MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				97EE6CF3255A0D05000CB298 /* MessagesViewController.swift */,
+				9744E36E255C8D06009BAF3E /* CustomData.swift */,
+				97BE293F2561BE850003BB30 /* Conversation.swift */,
+				9744E36A255C8C44009BAF3E /* StickerCell.swift */,
+				97EE6CF5255A0D05000CB298 /* MainInterface.storyboard */,
+				97EE6CF8255A0D05000CB298 /* Assets.xcassets */,
+				97EE6CFA255A0D05000CB298 /* Info.plist */,
+			);
+			path = "trendkeyboard MessagesExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97EE6CE0255A0D02000CB298 /* trendkeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97EE6D01255A0D05000CB298 /* Build configuration list for PBXNativeTarget "trendkeyboard" */;
+			buildPhases = (
+				97EE6CDF255A0D02000CB298 /* Resources */,
+				97EE6D00255A0D05000CB298 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97EE6CEE255A0D05000CB298 /* PBXTargetDependency */,
+			);
+			name = trendkeyboard;
+			productName = trendkeyboard;
+			productReference = 97EE6CE1255A0D02000CB298 /* trendkeyboard.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		97EE6CEA255A0D05000CB298 /* trendkeyboard MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97EE6CFD255A0D05000CB298 /* Build configuration list for PBXNativeTarget "trendkeyboard MessagesExtension" */;
+			buildPhases = (
+				97EE6CE7255A0D05000CB298 /* Sources */,
+				97EE6CE8255A0D05000CB298 /* Frameworks */,
+				97EE6CE9255A0D05000CB298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "trendkeyboard MessagesExtension";
+			productName = "trendkeyboard MessagesExtension";
+			productReference = 97EE6CEB255A0D05000CB298 /* trendkeyboard MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97EE6CDB255A0D01000CB298 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					97EE6CE0255A0D02000CB298 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					97EE6CEA255A0D05000CB298 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 97EE6CDE255A0D01000CB298 /* Build configuration list for PBXProject "trendkeyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97EE6CDA255A0D01000CB298;
+			productRefGroup = 97EE6CE2255A0D02000CB298 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97EE6CE0255A0D02000CB298 /* trendkeyboard */,
+				97EE6CEA255A0D05000CB298 /* trendkeyboard MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97EE6CDF255A0D02000CB298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97A529E5255F86A600D8A886 /* Assets.xcassets in Resources */,
+				97EE6CE5255A0D04000CB298 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97EE6CE9255A0D05000CB298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EE6CF9255A0D05000CB298 /* Assets.xcassets in Resources */,
+				97BE293C2561B0830003BB30 /* Sounds.bundle in Resources */,
+				9744E379255C9378009BAF3E /* Stickers.bundle in Resources */,
+				97EE6CF7255A0D05000CB298 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97EE6CE7255A0D05000CB298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BE29402561BE850003BB30 /* Conversation.swift in Sources */,
+				9744E36F255C8D06009BAF3E /* CustomData.swift in Sources */,
+				9744E36B255C8C44009BAF3E /* StickerCell.swift in Sources */,
+				97EE6CF4255A0D05000CB298 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97EE6CEE255A0D05000CB298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97EE6CEA255A0D05000CB298 /* trendkeyboard MessagesExtension */;
+			targetProxy = 97EE6CED255A0D05000CB298 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97EE6CF5255A0D05000CB298 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97EE6CF6255A0D05000CB298 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97EE6CFB255A0D05000CB298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97EE6CFC255A0D05000CB298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97EE6CFE255A0D05000CB298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE62XUH88S;
+				INFOPLIST_FILE = "trendkeyboard MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WomenWired.trendkeyboard.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97EE6CFF255A0D05000CB298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE62XUH88S;
+				INFOPLIST_FILE = "trendkeyboard MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WomenWired.trendkeyboard.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97EE6D02255A0D05000CB298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE62XUH88S;
+				INFOPLIST_FILE = trendkeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				PRODUCT_BUNDLE_IDENTIFIER = WomenWired.trendkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97EE6D03255A0D05000CB298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE62XUH88S;
+				INFOPLIST_FILE = trendkeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				PRODUCT_BUNDLE_IDENTIFIER = WomenWired.trendkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97EE6CDE255A0D01000CB298 /* Build configuration list for PBXProject "trendkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97EE6CFB255A0D05000CB298 /* Debug */,
+				97EE6CFC255A0D05000CB298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97EE6CFD255A0D05000CB298 /* Build configuration list for PBXNativeTarget "trendkeyboard MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97EE6CFE255A0D05000CB298 /* Debug */,
+				97EE6CFF255A0D05000CB298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97EE6D01255A0D05000CB298 /* Build configuration list for PBXNativeTarget "trendkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97EE6D02255A0D05000CB298 /* Debug */,
+				97EE6D03255A0D05000CB298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97EE6CDB255A0D01000CB298 /* Project object */;
+}
