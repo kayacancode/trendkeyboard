@@ -3,7 +3,7 @@
 //  trendkeyboard MessagesExtension
 //
 //  Created by Kaya Jones on 11/9/20.
-// hello this is a test 
+// hello this is a test
 
 import UIKit
 import Messages
@@ -109,6 +109,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         if self.searchBar.text == "" {
             self.searchBar.showsCancelButton = false
             filteredStickerList = stickerList
+            print(filteredStickerList) // once u type somthing and then you clear it, this is called
            
         } else {
             self.searchBar.showsCancelButton = true
@@ -146,8 +147,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         stickerCollection.delegate = self
         stickerCollection.dataSource = self
         searchBar.delegate = self
-        
-     
+        field.delegate = self
         
   
 }
@@ -168,12 +168,17 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
 
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if filteredStickerList.count == 0 {
-            return stickerList.count
-        } else {
+//        if filteredStickerList.count == 0 {
+//            return stickerList.count
+//        } else {
+//            return filteredStickerList.count
+//        }
+//
+        if(searchBar.isActive)
+        {
             return filteredStickerList.count
         }
-        
+        return stickerList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
