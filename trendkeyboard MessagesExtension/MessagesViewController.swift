@@ -147,7 +147,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         stickerCollection.delegate = self
         stickerCollection.dataSource = self
         searchBar.delegate = self
-        field.delegate = self
+//        field.delegate = self
         
   
 }
@@ -168,28 +168,32 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
 
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if filteredStickerList.count == 0 {
-//            return stickerList.count
-//        } else {
-//            return filteredStickerList.count
-//        }
-//
-        if(searchBar.isActive)
-        {
+        if filteredStickerList.count == 0 {
+            print("this is the stickerlist ", stickerList)
+            return stickerList.count
+            
+        } else {
+            print("this is the filteredstickerlist", filteredStickerList)
+
             return filteredStickerList.count
         }
-        return stickerList.count
+
+//        if(searchBar.isActive)
+//        {
+//            return filteredStickerList.count
+//        }
+//        return stickerList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StickerCell
-//        if self.searchBar.text == ""{
-//            cell.configure(with: stickerList)
-//        } else{
-//            cell.configure(with: filteredStickerList)
-//
-//        }
-        cell.configure(with: stickerList[indexPath.item])
+        if ((self.searchBar.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)){
+            cell.configure(with: stickerList[indexPath.item])
+        } else{
+            cell.configure(with: filteredStickerList[indexPath.item])
+
+        }
+//        cell.configure(with: stickerList[indexPath.item])
         return cell
 
     }
