@@ -7,7 +7,6 @@
 
 import UIKit
 import Messages
-import AVFoundation
 
 
 class MessagesViewController: MSMessagesAppViewController, UICollectionViewDelegate, UISearchBarDelegate {
