@@ -133,6 +133,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
             self.searchBar.resignFirstResponder()
             self.searchBar.text = ""
             self.searchBar.showsCancelButton = false
+            
         }
         
         
@@ -169,11 +170,11 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if filteredStickerList.count == 0 {
-            print("this is the stickerlist ", stickerList)
+//            print("this is the stickerlist ", stickerList)
             return stickerList.count
             
         } else {
-            print("this is the filteredstickerlist", filteredStickerList)
+//            print("this is the filteredstickerlist", filteredStickerList)
 
             return filteredStickerList.count
         }
@@ -189,9 +190,12 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StickerCell
         if ((self.searchBar.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)){
             cell.configure(with: stickerList[indexPath.item])
+        
         } else{
+           
             cell.configure(with: filteredStickerList[indexPath.item])
-
+//           stickerCollection.reloadItems(at: filteredStickerList[indexPath.item])
+            stickerCollection.reloadItems(at: [indexPath])
         }
 //        cell.configure(with: stickerList[indexPath.item])
         return cell
