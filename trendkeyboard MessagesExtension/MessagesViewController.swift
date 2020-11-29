@@ -127,16 +127,16 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        
+
+
         if !(self.searchBar.text?.isEmpty)! {
             self.searchBar.resignFirstResponder()
             self.searchBar.text = ""
             self.searchBar.showsCancelButton = false
-            
+
         }
-        
-        
+
+
     }
   
     
@@ -187,17 +187,17 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StickerCell
         if ((self.searchBar.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)){
             cell.configure(with: stickerList[indexPath.item])
         
         } else{
-           
+            if filteredStickerList.count > 0 && indexPath.item < filteredStickerList.count{
+            
             cell.configure(with: filteredStickerList[indexPath.item])
-//           stickerCollection.reloadItems(at: filteredStickerList[indexPath.item])
-            stickerCollection.reloadItems(at: [indexPath])
         }
-//        cell.configure(with: stickerList[indexPath.item])
+        }
         return cell
 
     }
