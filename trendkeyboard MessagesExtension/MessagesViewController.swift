@@ -14,7 +14,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
     
     var stickerCollection:UICollectionView!
     
-    
+    var mainStickerList = [StickerCell]()
     var stickerList = [URL]()
     var filteredStickerList = [URL]()
     
@@ -102,29 +102,33 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
             self.requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
         }
         
+        
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredStickerList = []
        
-        if self.searchBar.text == "" {
+        if ((self.searchBar.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)){
             self.searchBar.showsCancelButton = false
             filteredStickerList = stickerList
-            print(filteredStickerList) // once u type somthing and then you clear it, this is called
+//            print(filteredStickerList) // once u type somthing and then you clear it, this is called
            
         } else {
             self.searchBar.showsCancelButton = true
-            for sticker in stickerList {
-                let string = sticker.absoluteString
-                if string.lowercased().contains(searchText.lowercased()){
-                    filteredStickerList.append(sticker)
+            for sticker in mainStickerList {
+                
+                let string = sticker.stickerName
+                if string!.lowercased().contains(searchText.lowercased()){
+                    if !filteredStickerList.contains(sticker.stickerURL!){
+                        filteredStickerList.append(sticker.stickerURL!)
+                    }
                 }
 
             }
-    
         }
-        self.stickerCollection.reloadData()
-       
+        stickerCollection.reloadData()
+//        print(filteredStickerList)
     }
+    
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 
@@ -132,6 +136,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         if !(self.searchBar.text?.isEmpty)! {
             self.searchBar.resignFirstResponder()
             self.searchBar.text = ""
+            self.searchBar.endEditing(true)
             self.searchBar.showsCancelButton = false
 
         }
@@ -148,7 +153,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         stickerCollection.delegate = self
         stickerCollection.dataSource = self
         searchBar.delegate = self
-//        field.delegate = self
+
         
   
 }
@@ -193,10 +198,11 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
             cell.configure(with: stickerList[indexPath.item])
         
         } else{
-            if filteredStickerList.count > 0 && indexPath.item < filteredStickerList.count{
             
             cell.configure(with: filteredStickerList[indexPath.item])
         }
+        if !mainStickerList.contains(cell){
+            mainStickerList.append(cell)
         }
         return cell
 

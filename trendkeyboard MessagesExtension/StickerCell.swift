@@ -11,8 +11,8 @@ import Messages
 class StickerCell: UICollectionViewCell {
     
     
-    private var stickerName: String?
-    
+    var stickerName: String?
+    var stickerURL : URL?
     
     private let mySticker: MSStickerView = {
         let stickerView = MSStickerView()
@@ -23,7 +23,14 @@ class StickerCell: UICollectionViewCell {
         return stickerView
     }()
     
-    
+    override func isEqual(_ object: Any?) -> Bool {
+        if object is StickerCell {
+            let stickerObject = object as! StickerCell
+            return stickerObject.stickerName == self.stickerName
+
+        }
+        return false
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(mySticker)
@@ -42,9 +49,9 @@ class StickerCell: UICollectionViewCell {
     func configure(with stickerURL : URL ) {
 
         mySticker.sticker =  try? MSSticker( contentsOfFileURL: stickerURL, localizedDescription: stickerURL.absoluteString)
-        
-        stickerName = stickerURL.absoluteString
-        
+        let stickerString = stickerURL.absoluteString.split(separator: "/")[17].split(separator:".")[0] // separates the stickername from the url
+        stickerName = String(stickerString)
+        self.stickerURL = stickerURL
         
     }
     
