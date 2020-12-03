@@ -170,7 +170,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
 
 extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 160)
+        return CGSize(width: 200, height: 260)
 
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
