@@ -170,7 +170,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
 
 extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 260)
+        return CGSize(width: 150, height: 210)
 
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -184,11 +184,7 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
             return filteredStickerList.count
         }
 
-//        if(searchBar.isActive)
-//        {
-//            return filteredStickerList.count
-//        }
-//        return stickerList.count
+
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
